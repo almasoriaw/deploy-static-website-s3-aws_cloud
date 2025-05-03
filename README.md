@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project demonstrates how to deploy a static website using **Amazon S3** and **CloudFront**. We configure S3 to host your website files and use CloudFront as a Content Delivery Network (CDN) for global distribution.
+This project demonstrates how to deploy a static website using **Amazon S3** and **CloudFront**. We configure S3 to host your website files and use CloudFront as a Content Delivery Network (CDN) for global distribution. Static websites are ideal for hosting HTML, CSS, and JavaScript files that do not require server-side processing.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -90,6 +90,8 @@ To deploy your own static website on AWS, follow these steps:
 6. In **Block Public Access settings**, **uncheck** `Block all public access`.
 7. Click **Create bucket**.
 
+![image](https://github.com/user-attachments/assets/497287f5-6b59-4f8f-b021-efb80e7820c8)
+
 #### 2. Upload Files to the S3 Bucket
 
 1. Click the name of your bucket.
@@ -103,6 +105,9 @@ To deploy your own static website on AWS, follow these steps:
 5. Click **Upload**.
 
 > ⚠️ If you encounter upload issues (e.g., ad blockers), try disabling ad blockers or use the AWS CLI instead.
+
+![image](https://github.com/user-attachments/assets/244783f6-bc19-457e-9176-ade9669f5067)
+
 
 #### 3. [Optional] Upload via AWS CLI
 
@@ -142,6 +147,9 @@ aws s3 cp vendor/ s3://my-bucket-name/vendor/ --recursive
 }
 ```
 
+![image](https://github.com/user-attachments/assets/ae013642-210e-4558-8c3d-5e18770ea7ff)
+
+
 #### 5. Configure Static Website Hosting
 
 1. Go to the **Properties** tab of your bucket.
@@ -157,6 +165,7 @@ aws s3 cp vendor/ s3://my-bucket-name/vendor/ --recursive
 6. Copy the **Website endpoint URL**—this is your public S3-hosted website link.
 
 > 💡 Note: To access your site via this URL, the content must be publicly readable (as configured in the previous step).
+![image](https://github.com/user-attachments/assets/3be2a75f-091e-4556-aaeb-2dbc83293b82)
 
 #### 6. Create a CloudFront Distribution
 
@@ -174,6 +183,11 @@ aws s3 cp vendor/ s3://my-bucket-name/vendor/ --recursive
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+![image](https://github.com/user-attachments/assets/0ab09b0a-9c62-449c-bf2c-d9cfa874a7a1)
+
+![image](https://github.com/user-attachments/assets/0e678859-965b-49f3-a6b3-b87b2adfe3c2)
+
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -189,6 +203,8 @@ You can access your deployed website using:
   `https://<bucket-name>.s3.amazonaws.com/index.html`
 
 > All three should display the same `index.html` content if permissions are correctly set.
+
+> ![image](https://github.com/user-attachments/assets/cc753f94-9773-45c5-b43e-c568e6c9d5e6)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
