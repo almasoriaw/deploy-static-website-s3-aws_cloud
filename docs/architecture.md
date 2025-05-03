@@ -13,6 +13,8 @@ The architecture uses two primary AWS services:
 ```
 [ Web Client ] ---> [ CloudFront Distribution ] ---> [ S3 Bucket ]
 ```
+![image](https://github.com/user-attachments/assets/db484e31-4c06-47b9-83fe-5ac56635f1d3)
+
 
 ## Components
 
